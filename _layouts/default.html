@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <link rel="canonical" href="{{ site.url }}" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ site.title }}" />
+  <meta property="og:description" content="{{ site.description }}"/>
+  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content="{{ site.description }}" />
+  <meta name="twitter:title" content="{{ site.title }}" />
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="dist/css/styles.min.css">
+
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
+  {% endif %}
+</head>
+<body {% if page.body_classes %} class="{{ page.body_classes }}" {% endif %} id="top">
+  {% include header.html %}
+  <main id="main">
+      {{ content }}
+  </main>
+  {% include footer.html %}
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="dist/js/scripts.min.js"></script>
+
+</body>
+</html>
