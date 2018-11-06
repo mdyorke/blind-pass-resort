@@ -5,10 +5,7 @@ url: localhost:4000
 markdown: kramdown
 
 exclude:
-  - package.json
-  - node_modules
   - gulpfile.js
-  - README.md
 
 collections:
   rooms:
